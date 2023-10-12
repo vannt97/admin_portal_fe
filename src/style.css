@@ -1,0 +1,73 @@
+.kgb-advance-search-drawer .ant-drawer-content-wrapper {
+	width: 320px;
+}
+.kgb-advance-search-drawer .ant-drawer-content-wrapper .ant-drawer-wrapper-body .ant-drawer-body .ant-select {
+	width: 100%;
+}
+.kgb-advance-search-drawer .ant-drawer-content-wrapper .ant-drawer-wrapper-body .ant-drawer-body .ant-col {
+	margin-bottom: 10px;
+}
+.kgb-advance-search-drawer .ant-drawer-content-wrapper .ant-drawer-wrapper-body .ant-drawer-body .ant-calendar-picker {
+	width: 100%;
+}
+.ant-modal-content .ant-modal-header .ant-modal-title {
+	color: #788195;
+}
+.ant-modal-content .ant-modal-footer .kgb-modal-btn-cancel {
+	text-decoration: underline;
+	margin-right: 30px;
+	cursor: pointer;
+	font-weight: 500;
+}
+.kgb-advance-search-drawer .drawer-clearall {
+	text-align: right;
+	color: #4482ff;
+	text-decoration: underline;
+	cursor: pointer;
+}
+.kgb-top-notify #notify-symbol {
+	width: 22px;
+	height: 22px;
+	top: -10px;
+	background-color: #de350b;
+}
+.main-loading {
+	min-height: 150px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.ContentWrapperParent {
+	width: 100%;
+}
+
+.ant-form-item textarea.ant-input {
+	min-height: 100px;
+}
+
+.ant-table-column-sorters {
+	padding: 0px !important;
+}
+
+.tag-key .ant-select-dropdown {
+	display: none !important;
+}
+
+.image-table {
+	width: 50px;
+	height: 50px;
+	object-fit: cover;
+}
+
+.ant-modal {
+	width: 800px !important;
+}
+
+.ant-input-number {
+	width: 100% !important;
+}
+
+.upload .ant-upload-list {
+	display: none !important;
+}

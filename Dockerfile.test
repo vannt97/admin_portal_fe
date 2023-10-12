@@ -1,0 +1,19 @@
+FROM node:16.13.2 as build
+WORKDIR /olet-portal-test-build
+
+# COPY PORTAL/package.json /olet-portal-test-build
+# COPY PORTAL/.env.test /olet-portal-test-build
+# COPY PORTAL/config-overrides.js /olet-portal-test-build
+# COPY PORTAL/public /olet-portal-test-build
+
+
+COPY ./PORTAL /olet-portal-test-build
+RUN yarn
+RUN yarn build:test
+
+FROM node:16.13.2-alpine as run
+WORKDIR /olet-portal-test-run
+RUN yarn global add serve
+COPY --from=build /olet-portal-test-build/build ./build
+
+CMD ["serve", "-l", "80", "-s", "./build"]

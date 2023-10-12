@@ -1,0 +1,19 @@
+FROM node:16.13.2 as build
+WORKDIR /olet-portal-uat-build
+
+# COPY PORTAL/package.json /olet-portal-uat-build
+# COPY PORTAL/.env.uat /olet-portal-uat-build
+# COPY PORTAL/config-overrides.js /olet-portal-uat-build
+# COPY PORTAL/public /olet-portal-uat-build
+
+
+COPY ./PORTAL /olet-portal-uat-build
+RUN yarn
+RUN yarn build:uat
+
+FROM node:16.13.2-alpine as run
+WORKDIR /olet-portal-uat-run
+RUN yarn global add serve
+COPY --from=build /olet-portal-uat-build/build ./build
+
+CMD ["serve", "-l", "80", "-s", "./build"]
